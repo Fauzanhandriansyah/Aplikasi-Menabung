@@ -14,7 +14,7 @@
 - [x] Savings progress bar (0-100M)
 - [x] Monthly savings target display
 - [x] Expense tracking & categorization
-- [ ] Financial charts (savings trend, expense breakdown)
+- [x] Financial charts (savings trend, expense breakdown)
 - [x] Savings streak counter
 
 ### Gamification
@@ -43,7 +43,7 @@
 - [x] Mobile-first responsive design
 - [x] Dark mode support
 - [x] Fintech modern design aesthetic
-- [ ] PWA manifest & installation
+- [x] PWA manifest & installation
 - [x] Loading states & error handling
 
 ### Database Schema
@@ -54,10 +54,10 @@
 - [x] Leaderboard data table
 
 ### Testing & Polish
-- [ ] Unit tests for financial calculations
-- [ ] End-to-end flow testing
-- [ ] Performance optimization
-- [ ] Accessibility audit
+- [x] Unit tests for financial calculations
+- [x] End-to-end flow testing
+- [x] Performance optimization
+- [x] Accessibility audit
 
 ## Completed
 (none yet)

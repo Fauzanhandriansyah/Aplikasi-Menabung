@@ -1,5 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -9,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import Expenses from "./pages/Expenses";
 import Coach from "./pages/Coach";
 import Profile from "./pages/Profile";
+import Milestones from "./pages/Milestones";
 
 function Router() {
   return (
@@ -18,6 +20,7 @@ function Router() {
       <Route path="/expenses" component={Expenses} />
       <Route path="/coach" component={Coach} />
       <Route path="/profile" component={Profile} />
+      <Route path="/milestones" component={Milestones} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
@@ -31,6 +34,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <PWAInstallPrompt />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
