@@ -88,7 +88,7 @@
       },
       "uniqueConstraints": {
         "users_openId_unique": {
-          "name": "users_openId_unique",
+          "name": "users_openId_unique", 
           "columns": [
             "openId"
           ]
