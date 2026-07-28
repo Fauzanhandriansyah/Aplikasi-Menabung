@@ -5,7 +5,6 @@ CREATE TABLE `badges` (
 	`unlockedAt` timestamp NOT NULL DEFAULT (now()),
 	CONSTRAINT `badges_id` PRIMARY KEY(`id`)
 );
---> statement-breakpoint
 CREATE TABLE `coach_conversations` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`userId` int NOT NULL,
@@ -14,7 +13,6 @@ CREATE TABLE `coach_conversations` (
 	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
 	CONSTRAINT `coach_conversations_id` PRIMARY KEY(`id`)
 );
---> statement-breakpoint
 CREATE TABLE `expenses` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`userId` int NOT NULL,
@@ -25,7 +23,6 @@ CREATE TABLE `expenses` (
 	`createdAt` timestamp NOT NULL DEFAULT (now()),
 	CONSTRAINT `expenses_id` PRIMARY KEY(`id`)
 );
---> statement-breakpoint
 CREATE TABLE `financial_records` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`userId` int NOT NULL,
@@ -36,7 +33,6 @@ CREATE TABLE `financial_records` (
 	`createdAt` timestamp NOT NULL DEFAULT (now()),
 	CONSTRAINT `financial_records_id` PRIMARY KEY(`id`)
 );
---> statement-breakpoint
 CREATE TABLE `gamification` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`userId` int NOT NULL,
@@ -49,7 +45,6 @@ CREATE TABLE `gamification` (
 	CONSTRAINT `gamification_id` PRIMARY KEY(`id`),
 	CONSTRAINT `gamification_userId_unique` UNIQUE(`userId`)
 );
---> statement-breakpoint
 CREATE TABLE `leaderboard` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`userId` int NOT NULL,
@@ -62,7 +57,6 @@ CREATE TABLE `leaderboard` (
 	CONSTRAINT `leaderboard_id` PRIMARY KEY(`id`),
 	CONSTRAINT `leaderboard_userId_unique` UNIQUE(`userId`)
 );
---> statement-breakpoint
 CREATE TABLE `milestones` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`userId` int NOT NULL,
@@ -72,7 +66,6 @@ CREATE TABLE `milestones` (
 	`createdAt` timestamp NOT NULL DEFAULT (now()),
 	CONSTRAINT `milestones_id` PRIMARY KEY(`id`)
 );
---> statement-breakpoint
 CREATE TABLE `user_profiles` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`userId` int NOT NULL,
