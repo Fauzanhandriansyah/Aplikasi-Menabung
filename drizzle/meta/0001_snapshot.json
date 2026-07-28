@@ -602,7 +602,7 @@
           "autoincrement": false
         },
         "email": {
-          "name": "email",
+          "name": "email", 
           "type": "varchar(320)",
           "primaryKey": false,
           "notNull": false,
