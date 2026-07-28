@@ -1,29 +1,13 @@
-/**
- * Manus Debug Collector (agent-friendly)
- *
- * Captures:
- * 1) Console logs
- * 2) Network requests (fetch + XHR)
- * 3) User interactions (semantic uiEvents: click/type/submit/nav/scroll/etc.)
- *
- * Data is periodically sent to /__manus__/logs
- * Note: uiEvents are mirrored to sessionEvents for sessionReplay.log
- */
 (function () {
   "use strict";
 
-  // Prevent double initialization
   if (window.__MANUS_DEBUG_COLLECTOR__) return;
 
-  // ==========================================================================
-  // Configuration
-  // ==========================================================================
   const CONFIG = {
     reportEndpoint: "/__manus__/logs",
     bufferSize: {
       console: 500,
       network: 200,
-      // semantic, agent-friendly UI events
       ui: 500,
     },
     reportInterval: 2000,
@@ -37,18 +21,11 @@
       "session",
     ],
     maxBodyLength: 10240,
-    // UI event logging privacy policy:
-    // - inputs matching sensitiveFields or type=password are masked by default
-    // - non-sensitive inputs log up to 200 chars
     uiInputMaxLen: 200,
     uiTextMaxLen: 80,
-    // Scroll throttling: minimum ms between scroll events
     scrollThrottleMs: 500,
   };
 
-  // ==========================================================================
-  // Storage
-  // ==========================================================================
   const store = {
     consoleLogs: [],
     networkRequests: [],
@@ -56,10 +33,6 @@
     lastReportTime: Date.now(),
     lastScrollTime: 0,
   };
-
-  // ==========================================================================
-  // Utility Functions
-  // ==========================================================================
 
   function sanitizeValue(value, depth) {
     if (depth === void 0) depth = 0;
