@@ -23,7 +23,7 @@ pnpm-lock.yaml
 # Logs
 *.log
 
-# Environment files
+# Environment files 
 .env*
 
 # IDE files
