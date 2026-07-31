@@ -9,7 +9,7 @@ describe("Financial Calculations", () => {
       expect(months).toBeLessThan(500);
     });
 
-    it("should return 0 months if already at target", () => {
+    it("should return 0 months if already at target", () => { 
       const months = calculateMonthsToTarget(100_000_000, 5_000_000, 20);
       expect(months).toBeLessThanOrEqual(0);
     });
